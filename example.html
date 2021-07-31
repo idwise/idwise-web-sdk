@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>IDWise Web SDK Sample</title>
+
+    <!-- Optional prefetch header to kick off loading the script earlier -->
+    <link href="./lib/idwise.min.js" rel="preload" as="script">
+	
+    <link href="./lib/idwise.min.css" rel="stylesheet">
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        padding: 0;
+        height: 100%;
+      }
+      #idwise-mount {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      <strong>We're sorry but WebSDK doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+
+    <!-- This is the DOM element to mount IDWise SDK UI in -->
+    <div id="idwise-mount"></div>
+    
+    <script src="./lib/idwise.min.js"></script>
+
+    <script>
+      let idwise = IDWise.initialize({
+        businessId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+        apiKey: '',
+        apiSecret: ''
+      })
+      .then((idwise) => {
+        idwise.startJourney({
+          mount: '#idwise-mount',
+          journeyTemplateId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+          eventHandlers: {
+            onFinished: function(details) {
+              console.log('Journey finished', JSON.stringify(details))
+              alert('Thanks for completing the registration')
+            }
+          }
+        })
+      })
+    </script>
+  </body>
+</html>
