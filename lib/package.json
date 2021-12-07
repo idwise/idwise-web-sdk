@@ -1,0 +1,27 @@
+{
+  "name": "idwise-web-sdk",
+  "version": "1.0.2",
+  "description": "IDWise Javascript SDK for integrating on client-side Web Applications",
+  "main": "idwise.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idwise/idwise-web-sdk.git"
+  },
+  "keywords": [
+    "identity-verification",
+    "id-verification",
+    "digital-id",
+    "passport",
+    "driving-license",
+    "ocr"
+  ],
+  "author": "IDWise Ltd",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/idwise/idwise-web-sdk/issues"
+  },
+  "homepage": "https://github.com/idwise/idwise-web-sdk#readme"
+}
